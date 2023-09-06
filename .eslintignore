@@ -1,0 +1,11 @@
+# Ignore all files and directories in the "node_modules" directory
+node_modules/
+
+
+# Ignore files with a specific extension (e.g., .json and .md files)
+**/*.json
+**/*.md
+**/*.vue
+
+# Ignore all files in a specific directory
+docs/
