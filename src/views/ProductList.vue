@@ -9,17 +9,21 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import { Product } from "@/types/product.types";
 import ProductLayout from "@/components/ProductList/ProductLayout.vue";
-// import { useProductStore } from "@/stores/ProductStore";
-// const pd = useProductStore();
-// interface ProductList {
-//   pd: Product;
-// }
+import { useProductStore } from "@/stores/ProductStore";
+interface ProductList {
+  pd: Product;
+}
 export default defineComponent({
   components: { ProductLayout },
   setup() {
+    const pd = useProductStore();
+    onMounted(() => {
+      console.log(pd.productCount);
+    });
+    
     return {};
   },
 });

@@ -6,6 +6,7 @@
   </div>
 </template>
 <script lang="ts">
+import { useProductStore } from "@/stores/ProductStore";
 import { Product } from "@/types/product.types";
 import axios from "axios";
 import { defineComponent, onMounted, ref } from "vue";
@@ -15,6 +16,7 @@ export default defineComponent({
   components: { ProductCard },
   setup(props) {
     let products = ref<Product[]>([]);
+    const store = useProductStore();
     onMounted(() => {
       getProducts();
     });

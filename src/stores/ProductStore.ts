@@ -10,6 +10,7 @@ export const useProductStore = defineStore("product", {
       return state.products.find((product) => product.id === id);
     },
     productCount(state) {
+      console.log(state.products.length);
       return state.products.length ;
     },
   },
