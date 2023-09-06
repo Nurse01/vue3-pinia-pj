@@ -1,9 +1,26 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<template>
+  <div class="container">
+    <h3 class="py-4">Products</h3>
+    <!-- <p>{{ products }}</p> -->
+    <!-- <p>{{pd.productCount}}</p> -->
 
+    <!-- Card All product -->
+    <product-layout />
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+import { Product } from "@/types/product.types";
+import ProductLayout from "@/components/ProductList/ProductLayout.vue";
+// import { useProductStore } from "@/stores/ProductStore";
+// const pd = useProductStore();
+// interface ProductList {
+//   pd: Product;
+// }
 export default defineComponent({
-    setup() {
-        
-    },
-})
+  components: { ProductLayout },
+  setup() {
+    return {};
+  },
+});
 </script>
