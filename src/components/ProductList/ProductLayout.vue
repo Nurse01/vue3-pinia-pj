@@ -23,6 +23,7 @@ export default defineComponent({
     const getProducts = () => {
       axios.get(`${API_URL}/products`).then((res) => {
         store.addProduct(res.data.products);
+        // store.getProductById(1);
         products.value = store.getAllProducts;
         // console.log(products.value);
       });

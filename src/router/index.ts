@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ProductList from "../components/ProductList/ProductLayout.vue";
-
+import ProductDetail from "../components/ProductList/ProductDetail.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     path:"/product",
     name:"product",
     component : ProductList,
+  },
+  {
+    path:"/product/:id",
+    name:"productDetail",
+    component : ProductDetail,
   }
 ];
 
