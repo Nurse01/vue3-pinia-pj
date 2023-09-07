@@ -1,14 +1,21 @@
 <template>
-    <div>
-        <p>btn cpn</p>
-    </div>
+  <div>
+    <button class="btn btn-primary">{{ btnTitle }}</button>
+  </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-    setup() {
-        
-    },
-})
+  props: ["btnTitle", "refLinked"],
+  setup(props) {
+    const btnTitle = ref<string>("");
+    const refLinked = ref<string>("");
+    onMounted(()=>{
+        btnTitle.value = props.btnTitle
+        refLinked.value = props.refLinked
+    })
+    return { btnTitle };
+  },
+});
 </script>
