@@ -6,6 +6,7 @@ node_modules/
 **/*.json
 **/*.md
 **/*.vue
+**/*.ts
 
 # Ignore all files in a specific directory
 docs/

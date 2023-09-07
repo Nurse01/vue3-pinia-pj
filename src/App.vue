@@ -3,11 +3,13 @@
     <h1>Vue3 and TS trainging</h1>
     <router-link to="/">Home</router-link> |
     <router-link to="/learning">Learning</router-link> |
+    <router-link to="/product">Products</router-link> |
   </nav>
   <router-view />
 </template>
 
 <style>
+@import "~bootstrap/dist/css/bootstrap.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,3 +31,5 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+

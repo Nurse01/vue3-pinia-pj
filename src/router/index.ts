@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import ProductList from "../components/ProductList/ProductLayout.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Learning.vue"),
   },
+  {
+    path:"/product",
+    name:"product",
+    component : ProductList,
+  }
 ];
 
 const router = createRouter({
